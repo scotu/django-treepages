@@ -1,4 +1,4 @@
 django-mptt
-django-authority
+#django-authority
 feincms
 django-admin-uploads

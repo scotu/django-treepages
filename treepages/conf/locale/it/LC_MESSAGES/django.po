@@ -73,10 +73,6 @@ msgstr "slug"
 msgid "page"
 msgstr "pagina"
 
-#: models.py:83
-msgid "cached URL"
-msgstr ""
-
 #: templates/admin/base.html:27
 msgid "Welcome,"
 msgstr "Benvenuto,"
@@ -92,3 +88,7 @@ msgstr "Cambia la password"
 #: templates/admin/base.html:32
 msgid "Documentation"
 msgstr "Documentazione"
+
+#: models.py:83
+msgid "cached URL"
+msgstr "URL in cache"

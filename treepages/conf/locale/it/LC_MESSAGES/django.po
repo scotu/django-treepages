@@ -2,8 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -18,76 +17,78 @@ msgstr ""
 
 #: admin.py:51
 msgid "inherited"
-msgstr ""
-
-#: admin.py:53 admin.py:56
-msgid "not active"
-msgstr ""
+msgstr "Ereditato"
 
 #: admin.py:60
 msgid "is visible"
-msgstr ""
+msgstr "è visibile"
+
+#: admin.py:53 admin.py:56
+msgid "not active"
+msgstr "non attivo"
+
+#: admin.py:68 models.py:82
+#, fuzzy
+msgid "in navigation"
+msgstr "in navigazione"
 
 #: admin.py:66
 msgid "Cached URL"
-msgstr ""
-
-#: admin.py:68 models.py:82
-msgid "in navigation"
-msgstr ""
-
-#: models.py:68
-msgid "active"
-msgstr ""
+msgstr "URL in Cache"
 
 #: models.py:72
 msgid "template"
-msgstr ""
+msgstr "modello"
 
-#: models.py:77
-msgid "title"
-msgstr ""
+#: models.py:68
+msgid "active"
+msgstr "attivo"
 
 #: models.py:78
 msgid "This is used for the generated navigation too."
-msgstr ""
+msgstr "Questo viene utilizzato anche nella navigazione generata automaticamente."
+
+#: models.py:77
+msgid "title"
+msgstr "titolo"
+
+#: templates/admin/base.html:54
+msgid "Home"
+msgstr "Home"
+
+#: templates/admin/base.html:47
+msgid "Log out"
+msgstr "Esci"
+
+#: models.py:80
+#, fuzzy
+msgid "body"
+msgstr "corpo"
 
 #: models.py:79
 msgid "slug"
-msgstr ""
+msgstr "slug"
 
-#: models.py:80
-msgid "body"
-msgstr ""
+#: models.py:88
+msgid "page"
+msgstr "pagina"
 
 #: models.py:83
 msgid "cached URL"
 msgstr ""
 
-#: models.py:88
-msgid "page"
-msgstr ""
+#: templates/admin/base.html:27
+msgid "Welcome,"
+msgstr "Benvenuto,"
 
 #: models.py:89
 msgid "pages"
-msgstr ""
-
-#: templates/admin/base.html:27
-msgid "Welcome,"
-msgstr ""
-
-#: templates/admin/base.html:32
-msgid "Documentation"
-msgstr ""
+msgstr "pagine"
 
 #: templates/admin/base.html:40
 msgid "Change password"
-msgstr ""
+msgstr "Cambia la password"
 
-#: templates/admin/base.html:47
-msgid "Log out"
-msgstr ""
-
-#: templates/admin/base.html:54
-msgid "Home"
-msgstr ""
+#: templates/admin/base.html:32
+msgid "Documentation"
+msgstr "Documentazione"

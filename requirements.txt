@@ -1,0 +1,4 @@
+django-mptt
+django-authority
+feincms
+django-admin-uploads

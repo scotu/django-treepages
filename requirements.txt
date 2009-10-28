@@ -2,3 +2,4 @@ django-mptt
 #django-authority
 feincms
 django-admin-uploads
+django-autoslug

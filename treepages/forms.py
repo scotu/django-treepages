@@ -1,5 +1,8 @@
 from django import forms
-from admin_upload.widgets import WYMEditor, WYMEditorUpload
+# TODO: remove unused widgets
+from admin_upload.widgets import WYMEditorUpload
+#from django_rte_widgets.wmd import WmdTextarea
+#from tinymce.widgets import TinyMCE
 from treepages.models import Page
 
 class PageAdminModelForm(forms.ModelForm):

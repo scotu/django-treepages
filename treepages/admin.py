@@ -3,10 +3,11 @@ from django.utils.translation import ugettext_lazy as _
 
 from treepages.models import Page
 from treepages.forms import PageAdminModelForm
+from attachments.admin import AttachmentInlines
 
 from feincms.admin import editor
 
-class PageAdmin(admin.ModelAdmin):
+class PageAdmin(editor.TreeEditor):
     form = PageAdminModelForm
     # the fieldsets config here is used for the add_view, it has no effect
     # for the change_view which is completely customized anyway
@@ -17,22 +18,25 @@ class PageAdmin(admin.ModelAdmin):
                            'in_navigation',
                            'template',
                            'title',
-                           'slug',
+                           #'slug',
                            #'parent',
                            'body',)
             },
         ),
     )
+    inlines = [AttachmentInlines]
+
     list_display = [
         #'short_title',
         'title',
         'cached_url_admin',
+        'slug',
         'is_visible_admin',
         'in_navigation_toggle',
         'template']
     list_filter = ('active', 'in_navigation', 'template',)
     search_fields = ('title', 'slug', 'body',)
-    prepopulated_fields = {'slug': ('title',)}
+    #prepopulated_fields = {'slug': ('title',)}
     raw_id_fields = []
 
     show_on_top = ('title', 'active')

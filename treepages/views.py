@@ -1,10 +1,19 @@
+from django.shortcuts import render_to_response
+from django.shortcuts import get_object_or_404
+from django.template import RequestContext
 from django.http import Http404
+
+from treepages.models import Page
+
 
 def base_url_page_handler(request, path=None):
     if path == None or path == '':
-        homepage(request)
+        raise Http404
     else:
-        raise Http404 
+        page = Page.objects.page_for_path_or_404(path)
+        return render_to_response(
+            page.template,
+            {'page':page},
+            context_instance=RequestContext(request)
+            )
 
-def homepage(request):
-    raise Http404 

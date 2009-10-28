@@ -7,6 +7,8 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 
 import mptt
+from autoslug.fields import AutoSlugField
+#from django_extensions.db.fields import AutoSlugField
 
 import app_settings as settings
 
@@ -70,13 +72,14 @@ class Page(models.Model):
     # properties
     author = models.ForeignKey(User, related_name='created_pages')
     template = models.CharField(_('template'),
-                                max_length=70,
-                                choices=settings.TREEPAGES_PAGE_TEMPLATE_CHOICES)
+                                max_length=120,
+                                choices=settings.TREEPAGES_PAGE_TEMPLATE_CHOICES,
+                                help_text="* modelli speciali che possiedono gia' un contenuto. Il testo e gli allegati sono inclusi in coda ad esso.")
 
     # structure and navigation
     title = models.CharField(_('title'), max_length=100,
         help_text=_('This is used for the generated navigation too.'))
-    slug = models.SlugField(_('slug'))
+    slug = AutoSlugField(_('slug'), populate_from='title', unique=True)
     body = models.TextField(_('body'))
     parent = models.ForeignKey('self', blank=True, null=True, related_name='children')
     in_navigation = models.BooleanField(_('in navigation'), default=True)
@@ -108,12 +111,15 @@ class Page(models.Model):
     def save(self, *args, **kwargs):
         cached_page_urls = {}
 
+        
+        # salvo in modo che lo slug sia creato da AutoSlugField
+        super(Page, self).save(*args, **kwargs)
+
         # determine own URL
         if self.is_root_node():
             self._cached_url = u'/%s/' % self.slug
         else:
             self._cached_url = u'%s%s/' % (self.parent._cached_url, self.slug)
-
         cached_page_urls[self.id] = self._cached_url
         super(Page, self).save(*args, **kwargs)
 

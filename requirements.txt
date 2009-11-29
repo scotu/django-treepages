@@ -1,5 +1,5 @@
-django-mptt
-#django-authority
-feincms
-django-admin-uploads
+-e svn+http://django-mptt.googlecode.com/svn/trunk/#egg=django-mptt
+#feincms la mia versione o
+# -e git://github.com/matthiask/feincms.git#egg=feincms
+#django-admin-uploads no
 django-autoslug

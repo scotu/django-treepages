@@ -94,7 +94,7 @@ class Page(models.Model):
     objects = PageManager()
 
     def __unicode__(self):
-        return u'%s (%s)' % (self.title, self._cached_url)
+        return u'%s' % self.title
 
     def are_ancestors_active(self):
         """

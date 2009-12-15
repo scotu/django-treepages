@@ -2,12 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-27 18:15+0200\n"
+"POT-Creation-Date: 2009-12-15 08:24+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,80 +15,78 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: admin.py:51
+#: admin.py:55
 msgid "inherited"
 msgstr "Ereditato"
 
-#: admin.py:60
-msgid "is visible"
-msgstr "è visibile"
-
-#: admin.py:53 admin.py:56
+#: admin.py:57 admin.py:60
 msgid "not active"
 msgstr "non attivo"
 
-#: admin.py:68 models.py:82
-#, fuzzy
-msgid "in navigation"
-msgstr "in navigazione"
+#: admin.py:64
+msgid "is visible"
+msgstr "è visibile"
 
-#: admin.py:66
+#: admin.py:70
 msgid "Cached URL"
-msgstr "URL in Cache"
+msgstr "URL in cache (indirizzo nel sito)"
 
-#: models.py:72
-msgid "template"
-msgstr "modello"
+#: admin.py:72 models.py:85
+msgid "in navigation"
+msgstr "nel menù"
 
-#: models.py:68
+#: models.py:70
 msgid "active"
 msgstr "attivo"
 
-#: models.py:78
-msgid "This is used for the generated navigation too."
-msgstr "Questo viene utilizzato anche nella navigazione generata automaticamente."
+#: models.py:74
+msgid "template"
+msgstr "modello"
 
-#: models.py:77
+#: models.py:80
 msgid "title"
 msgstr "titolo"
 
-#: templates/admin/base.html:54
-msgid "Home"
-msgstr "Home"
+#: models.py:81
+msgid "This is used for the generated navigation too."
+msgstr "Questo viene utilizzato anche nel menù generato automaticamente."
 
-#: templates/admin/base.html:47
-msgid "Log out"
-msgstr "Esci"
-
-#: models.py:80
-#, fuzzy
-msgid "body"
-msgstr "corpo"
-
-#: models.py:79
+#: models.py:82
 msgid "slug"
 msgstr "slug"
 
-#: models.py:88
+#: models.py:83
+msgid "body"
+msgstr "testo principale"
+
+#: models.py:86
+msgid "cached URL"
+msgstr "URL in cache (indirizzo nel sito)"
+
+#: models.py:91
 msgid "page"
 msgstr "pagina"
+
+#: models.py:92
+msgid "pages"
+msgstr "pagine"
 
 #: templates/admin/base.html:27
 msgid "Welcome,"
 msgstr "Benvenuto,"
 
-#: models.py:89
-msgid "pages"
-msgstr "pagine"
+#: templates/admin/base.html:32
+msgid "Documentation"
+msgstr "Documentazione"
 
 #: templates/admin/base.html:40
 msgid "Change password"
 msgstr "Cambia la password"
 
-#: templates/admin/base.html:32
-msgid "Documentation"
-msgstr "Documentazione"
+#: templates/admin/base.html:47
+msgid "Log out"
+msgstr "Esci"
 
-#: models.py:83
-msgid "cached URL"
-msgstr "URL in cache"
+#: templates/admin/base.html:54
+msgid "Home"
+msgstr "Home"

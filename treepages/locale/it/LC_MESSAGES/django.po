@@ -57,7 +57,7 @@ msgstr "slug"
 
 #: models.py:83
 msgid "body"
-msgstr "testo principale "
+msgstr "blabla"
 
 #: models.py:86
 msgid "cached URL"

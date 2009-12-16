@@ -6,17 +6,4 @@
 
 {{page.body|safe}}
 
-{% load attachments_tags %}
-{% get_attachments_for page as "page_attachments" %}
-{% if page_attachments %}
-<h4>Allegati all'articolo</h4>
-<ul>
-{% for attachment in page_attachments %}
-    <li>
-        <a href="{{ attachment.attachment_file.url }}">{{ attachment.filename }}</a>
-    </li>
-{% endfor %}
-</ul>
-{% endif %}
-
 {% endblock body %}

@@ -3,7 +3,6 @@ from django.utils.translation import ugettext_lazy as _
 
 from treepages.models import Page
 from treepages.forms import PageAdminModelForm
-from attachments.admin import AttachmentInlines
 
 from feincms.admin import editor
 
@@ -24,7 +23,6 @@ class PageAdmin(editor.TreeEditor):
             },
         ),
     )
-    inlines = [AttachmentInlines]
 
     list_display = [
         #'short_title',

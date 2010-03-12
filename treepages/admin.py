@@ -15,7 +15,6 @@ class PageAdmin(editor.TreeEditor):
             {
                 'fields': ('active',
                            'in_navigation',
-                           'template',
                            'title',
                            #'slug',
                            #'parent',
@@ -30,9 +29,8 @@ class PageAdmin(editor.TreeEditor):
         'cached_url_admin',
         'slug',
         'is_visible_admin',
-        'in_navigation_toggle',
-        'template']
-    list_filter = ('active', 'in_navigation', 'template',)
+        'in_navigation_toggle']
+    list_filter = ('active', 'in_navigation',)
     search_fields = ('title', 'slug', 'body',)
     #prepopulated_fields = {'slug': ('title',)}
     raw_id_fields = []

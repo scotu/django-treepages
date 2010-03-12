@@ -10,8 +10,6 @@ import mptt
 from autoslug.fields import AutoSlugField
 #from django_extensions.db.fields import AutoSlugField
 
-import app_settings as settings
-
 class PageManager(models.Manager):
 
     # A list of filters which are used to determine whether a page is active or not.
@@ -71,10 +69,6 @@ class Page(models.Model):
 
     # properties
     author = models.ForeignKey(User, related_name='created_pages')
-    template = models.CharField(_('template'),
-                                max_length=120,
-                                choices=settings.TREEPAGES_PAGE_TEMPLATE_CHOICES,
-                                help_text="* modelli speciali che possiedono gia' un contenuto. Il testo e gli allegati sono inclusi in coda ad esso.")
 
     # structure and navigation
     title = models.CharField(_('title'), max_length=100,

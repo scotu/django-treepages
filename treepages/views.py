@@ -12,7 +12,7 @@ def base_url_page_handler(request, path=None):
     else:
         page = Page.objects.page_for_path_or_404(path)
         return render_to_response(
-            page.template,
+            'treepages/pages/base.html',
             {'page':page},
             context_instance=RequestContext(request)
             )

@@ -57,7 +57,7 @@ class Migration:
         'treepages.page': {
             '_cached_url': ('django.db.models.fields.CharField', [], {'default': "''", 'max_length': '200', 'db_index': 'True', 'blank': 'True'}),
             'active': ('django.db.models.fields.BooleanField', [], {'default': 'False', 'blank': 'True'}),
-            'associated_color': ('ColorField', ["_('associated color')"], {'blank': 'True'}),
+            'associated_color': ('ColorField', ["_('associated color')"], {'default': "''", 'blank': 'True'}),
             'author': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'created_pages'", 'to': "orm['auth.User']"}),
             'body': ('django.db.models.fields.TextField', [], {}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),

@@ -74,7 +74,7 @@ class Page(models.Model):
         help_text=_('This is used for the generated navigation too.'))
     slug = AutoSlugField(_('slug'), populate_from='title', unique=True)
     body = models.TextField(_('body'))
-    associated_color = ColorField(_('associated color'), blank=True)
+    associated_color = ColorField(_('associated color'), blank=True, default='')
     # structure and navigation
     parent = models.ForeignKey('self', blank=True, null=True, related_name='children')
     in_navigation = models.BooleanField(_('in navigation'), default=True)

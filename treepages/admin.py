@@ -16,8 +16,7 @@ class PageAdmin(editor.TreeEditor):
                 'fields': ('active',
                            'in_navigation',
                            'title',
-                           #'slug',
-                           #'parent',
+                           'associated_color',
                            'body',)
             },
         ),

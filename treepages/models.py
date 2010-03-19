@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 
 import mptt
 from autoslug.fields import AutoSlugField
+from treepages.fields import ColorField
 #from django_extensions.db.fields import AutoSlugField
 
 class PageManager(models.Manager):
@@ -69,12 +70,12 @@ class Page(models.Model):
 
     # properties
     author = models.ForeignKey(User, related_name='created_pages')
-
-    # structure and navigation
     title = models.CharField(_('title'), max_length=100,
         help_text=_('This is used for the generated navigation too.'))
     slug = AutoSlugField(_('slug'), populate_from='title', unique=True)
     body = models.TextField(_('body'))
+    associated_color = ColorField(_('associated color'), blank=True)
+    # structure and navigation
     parent = models.ForeignKey('self', blank=True, null=True, related_name='children')
     in_navigation = models.BooleanField(_('in navigation'), default=True)
     _cached_url = models.CharField(_('cached URL'), max_length=200, blank=True,

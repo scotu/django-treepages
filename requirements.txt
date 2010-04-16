@@ -3,3 +3,4 @@
 # -e git://github.com/matthiask/feincms.git#egg=feincms
 #django-admin-uploads no
 django-autoslug
+-e git://github.com/django-extensions/django-extensions.git#egg=django-extensions

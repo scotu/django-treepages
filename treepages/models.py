@@ -9,7 +9,7 @@ from django.contrib.auth.models import User
 import mptt
 from autoslug.fields import AutoSlugField
 from treepages.fields import ColorField
-#from django_extensions.db.fields import AutoSlugField
+from django_extensions.db.models import TimeStampedModel
 
 class PageManager(models.Manager):
 
@@ -53,7 +53,7 @@ class PageManager(models.Manager):
     def page_for_path_or_404(self, path):
         """
         Wrapper for page_for_path which raises a Http404 if no page
-        has been found for the passed path.
+        has been found for the path.
         """
         return self.page_for_path(path, raise404=True)
 
@@ -65,7 +65,7 @@ class PageManager(models.Manager):
 
 
 
-class Page(models.Model):
+class Page(TimeStampedModel):
     active = models.BooleanField(_('active'), default=False)
 
     # properties

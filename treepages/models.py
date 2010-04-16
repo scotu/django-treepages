@@ -91,6 +91,9 @@ class Page(models.Model):
     def __unicode__(self):
         return u'%s' % self.title
 
+    def get_RGB_color(self):
+        return self.associated_color[:6]
+
     def are_ancestors_active(self):
         """
         Check whether all ancestors of this page are active

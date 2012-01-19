@@ -1,6 +1,7 @@
--e svn+http://django-mptt.googlecode.com/svn/trunk/#egg=django-mptt
-#feincms la mia versione o
-# -e git://github.com/matthiask/feincms.git#egg=feincms
-#django-admin-uploads no
+-e git+https://github.com/django-mptt/django-mptt.git@8ab6a85aecd8023afb709ab5e1e3ad26e58a84a4#egg=django_mptt-dev
+FeinCMS==1.5.0.pre1
+PIL==1.1.7
 django-autoslug
--e git://github.com/django-extensions/django-extensions.git#egg=django-extensions
+-e git+https://github.com/django-extensions/django-extensions.git@a5b4c86914fbfaf18627e5de75ee88514e6e3eda#egg=django_extensions-dev
+-e git+https://github.com/wardi/django-filebrowser-no-grappelli.git@8a8d89dbdfcdbf1bf48722eb2690ebb3376454ec#egg=django_filebrowser-dev
+-e git+https://github.com/aljosa/django-tinymce.git@dcce642f56368c3850153d20ccd1a767425302c6#egg=django_tinymce-dev

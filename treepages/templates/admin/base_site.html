@@ -1,10 +1,10 @@
 {% extends "admin/base.html" %}
 {% load i18n %}
 
-{% block title %}{{ title }} | Pannello di Controllo{% endblock %}
+{% block title %}{{ title }} | {% trans 'Control Panel' %}{% endblock %}
 
 {% block branding %}
-<h1 id="site-name">Sito della Scuola dell'Infanzia di Gussago - Pannello di Controllo</h1>
+<h1 id="site-name">Your website - {% trans 'Control Panel' %}</h1>
 {% endblock %}
 
 {% block nav-global %}{% endblock %}

@@ -5,3 +5,4 @@ django-autoslug
 -e git+https://github.com/django-extensions/django-extensions.git@a5b4c86914fbfaf18627e5de75ee88514e6e3eda#egg=django_extensions-dev
 -e git+https://github.com/wardi/django-filebrowser-no-grappelli.git@8a8d89dbdfcdbf1bf48722eb2690ebb3376454ec#egg=django_filebrowser-dev
 -e git+https://github.com/aljosa/django-tinymce.git@dcce642f56368c3850153d20ccd1a767425302c6#egg=django_tinymce-dev
+-e git+https://github.com/bartTC/django-attachments.git#egg=django-attachments
